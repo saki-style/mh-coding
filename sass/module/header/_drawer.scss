@@ -1,0 +1,26 @@
+.drawer {
+    &-hamburger {
+        position: absolute;
+        top: 50%;
+        right: 3px !important;
+        transform: translateY(-50%);
+        
+        &-icon {
+            background-color: $color-txt-base;
+            height: 3px;
+            
+            &::before,
+            &::after {
+                background-color: $color-txt-base;
+                height: 3px;
+            }
+        }
+    }
+    
+    &-nav {
+        @include mq('sp') {
+            top: 60px;
+            background-color: $color-bg;
+        }
+    }   
+}

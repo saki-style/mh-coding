@@ -1,0 +1,83 @@
+body {
+    font-family: $ff-base;
+    font-size: $fz-base;
+    line-height: $lh-base;
+    color: $color-txt-base;
+    background: url('../img/bg.png') center center / cover;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+img {
+    width: 100%;
+    border: none;
+}
+
+a {
+    display: inline-block;
+    color: $color-txt-base;
+    width: 100%;
+    transition: opacity .3s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+
+.main {
+    > * {
+        padding-top: 60px;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+}
+
+.sec-tit {
+    font-family: $ff-en;
+    text-align: center;
+    line-height: 1;
+    color: $color-txt-dark;
+    letter-spacing: -0.05em;
+    @include mq('sp') {
+        font-size: 28px;
+    }
+    @include mq('md') {
+        font-size: 43px;       
+    }
+}
+
+.inner {
+    max-width: $max-width;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.bg-box {
+    background-color: $color-bg-box;
+    @include mq('sp') {
+        padding: $pd-sp;
+    }
+    @include mq('md') {
+        padding: $pd-md;
+    }
+}
+
+// 表示切替
+._sp {
+    @include mq('md') {
+        display: none;
+    }
+}
+
+._md {
+    @include mq('sp') {
+        display: none;
+    }
+}

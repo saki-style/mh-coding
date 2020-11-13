@@ -1,0 +1,60 @@
+.form {
+    &-list {
+        margin-top: 21px;
+    }
+
+    &-item {
+        font-size: $fz-m;
+        @include mq('sp') {
+            max-width: $max-width-slct;
+            margin: 0 auto;
+        }
+        @include mq('md') {
+            display: flex;
+            align-items: center;
+        }
+
+        & + & {
+            margin-top: 15px;
+        }
+    }
+
+    &-tit {
+        font-weight: $fw-bold;
+        @include mq('md') {
+            flex: 0 1 100%;
+            margin-right: 1em;            
+            text-align: right;
+        }
+    }
+
+    &-data {
+        @include mq('md') {
+            flex: 0 0 520px;            
+        }
+
+        input,
+        textarea {
+            background-color: $color-bg-input;
+
+            &:focus {
+                border: 1px solid $color-link-base;
+            }
+        }
+
+        textarea {
+            height: 165px;
+        }
+    }
+
+    &-btn {
+        margin-top: 20px;
+        text-align: center;
+
+        button {
+            @include _btn;
+            width: 200px;
+            height: 60px;
+        }
+    }
+}

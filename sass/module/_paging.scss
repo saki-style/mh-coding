@@ -1,0 +1,40 @@
+.paging {
+    @include mq('sp') {
+        margin-top: 24px;
+    }
+    @include mq('md') {
+        margin-top: $pd-md;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-item {
+        height: 27px;
+
+        & + & {
+            margin-left: 9px;
+        }
+
+        a {
+            width: 27px;
+            line-height: 23px;
+            text-align: center;
+            font-size: $fz-xs;
+            font-weight: $fw-bold;
+            border: 2px solid $color-bg-dark;
+        }
+        
+        &._num a {
+            color: $color-txt-nav;
+            background-color: $color-bg-dark;
+        }
+
+        &._next a {
+            color: #1A1A1A;
+            background-color: transparent;
+        }
+    }
+}

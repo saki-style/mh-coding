@@ -1,0 +1,95 @@
+.cmt {
+    $this: &;
+
+    &-lead {
+        font-weight: $fw-bold;
+        text-align: center;
+        color: $color-txt-dark;
+        @include mq('sp') {
+            font-size: 16px;
+            margin-top: 22px;
+        }
+        @include mq('md') {
+            font-size: 24px;
+            margin-top: 33px;
+        }
+    }
+
+    &-box {
+        background-image: url(../img/comment/pic.png);
+        background-size: cover;
+        color: $color-txt-white;
+        position: relative;
+        @include mq('sp') {
+            background-position: right 30% center;
+            margin-top: 22px;
+            padding: 30px $pd-sp;
+        }
+        @include mq('md') {
+            background-position: center center;
+            margin-top: 33px;
+            padding: 44px $pd-md 41px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            background: linear-gradient(270deg, transparent 0%, $color-bg-black 100%);
+            top: 0;
+            left: 0;
+            width: 60.49%;
+            height: 100%;
+        }
+
+        #{$this}-name {
+            position: relative;
+            font-weight: $fw-bold;
+            @include mq('sp') {
+                font-size: 20px;
+            }
+            @include mq('md') {
+                font-size: 26px;
+            }
+
+            > small {
+                @include mq('sp') {
+                    display: block;
+                    font-size: 14px; 
+                }
+                @include mq('md') {
+                    font-size: 20px;
+                }
+            }
+        }
+    
+        #{$this}-txt {
+            position: relative;
+            font-size: $fz-s;
+            line-height: 1.5714;
+            padding-top: 10px;
+            @include mq('md') {
+                max-width: 420px;              
+            }
+        }
+    }
+
+    &-btn {
+        position: relative;
+        @include mq('sp') {
+            padding-top: $pd-sp;
+            text-align: center;
+        }
+
+        a {
+            @include _btn;
+            width: 115px;
+            line-height: 36px;
+            font-size: $fz-s;
+            @include mq('md') {
+                position: absolute;
+                top: -10px;
+                right: -15px;
+            }
+        }
+    }
+}

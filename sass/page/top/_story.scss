@@ -1,0 +1,59 @@
+.story {
+    $this: &;
+
+    &-box {
+        background-image: url(../img/story/bg0.png);
+        padding: $pd-md 0;
+        @include _gradbg;
+        @include mq('sp') {
+            background-position: center center;
+        }
+        @include mq('md') {
+            background-position: left -30% center;
+        }
+
+        #{$this}-txt {
+            height: 250px;
+            @include mq('md') {
+                max-width: 320px;
+            }
+        }
+    }
+
+    .sec-tit {
+        color: $color-txt-white;
+    }
+    
+    .inner {
+        padding-top: 19px;
+        position: relative;
+    }
+    
+    &-txt {
+        overflow: hidden;
+        font-size: $fz-xs;
+        color: $color-txt-white;
+        position: relative;
+        @include mq('md') {
+            margin-left: auto;
+        }
+    }
+
+    &-btn {
+        @include mq('sp') {
+            padding-top: $pd-sp;
+            text-align: center;
+        }
+        @include mq('md') {
+            margin-top: 8px;
+            text-align: right;            
+        }
+
+        a {
+            @include _btn;
+            width: 115px;
+            line-height: 36px;
+            font-size: $fz-s;
+        }
+    }
+}

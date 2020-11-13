@@ -1,0 +1,42 @@
+.intro {
+    margin-top: 60px;
+
+    .bg-box {
+        background-image: url(../img/top/intro_bg.png);
+        background-position: top left;
+        background-size: 28.39%;
+        background-repeat: no-repeat;
+    }
+    
+    &-lead {
+        color: $color-txt-dark;
+        text-align: center;
+        font-weight: $fw-bold;
+        line-height: 1;
+        @include mq('sp') {
+            margin-top: $pd-sp / 2;
+            font-size: 17px;
+        }
+        @include mq('md') {
+            margin-top: $pd-md / 2;
+            font-size: $fz-xl;            
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        font-size: $fz-xs;
+        @include mq('sp') {
+            margin-top: $pd-sp;
+            flex-direction: column;
+        }
+        @include mq('md') {
+            margin-top: $pd-md;
+            justify-content: space-between;
+
+            P {
+                flex: 0 0 48%;
+            }
+        }
+    }
+}

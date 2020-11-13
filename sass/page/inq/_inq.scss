@@ -1,0 +1,12 @@
+.inq {
+    .bg-box {
+        margin-top: 24px;
+        padding: $pd-md;
+    }
+
+    &-txt {
+        font-size: $fz-m;
+        font-weight: $fw-bold;
+        line-height: 1.6666;
+    }
+}

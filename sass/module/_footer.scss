@@ -1,0 +1,23 @@
+.footer {
+    background-color: $color-bg-dark;
+    @include mq('sp') {
+        padding: 20px 0 23px;       
+    }
+    @include mq('md') {
+        padding: 33px 0 35px;       
+    }
+
+    &-copy {
+        color: $color-txt-white;
+        text-align: center;
+
+        small {
+            @include mq('sp') {
+                font-size: 10px;                
+            }
+            @include mq('md') {
+                font-size: $fz-xs;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.cmt {
+    $this: &;
+
+    &-wrap {
+        @include _fwrap('md3');
+    }
+
+    &-art {
+        #{$this}-name {
+            font-size: $fz-l;
+            font-weight: $fw-bold;
+            text-align: center;
+
+            small {
+                display: block;
+                margin-top: 8px;
+                font-size: $fz-xs;
+                color: $color-txt-light;
+            }
+        }
+
+        #{$this}-txt {
+            margin-top: 10px;
+            line-height: 1.625;
+        }
+    }
+}

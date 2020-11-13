@@ -1,0 +1,104 @@
+.sched {
+    @include mq('sp') {
+        padding-bottom: $pd-sp * 2;        
+    }
+    @include mq('md') {
+        padding-bottom: $pd-md * 2;
+    }
+
+    .bg-box {
+        @include mq('sp') {
+            padding-bottom: $pd-sp * 2;
+        }
+        @include mq('md') {
+            padding: 30px 72px $pd-md * 2;         
+        }
+    }
+    
+    &-list {
+        @include mq('sp') {
+            margin-top: 24px;
+        }
+        @include mq('md') {
+            margin-top: 29px;        
+        }
+    }
+
+    &-item {
+        font-weight: $fw-bold;
+        color: $color-txt-dark;
+        display: flex;
+        justify-content: center;
+        @include mq('sp') {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        @include mq('md') {
+            font-size: 20px;
+        }
+
+        & + & {
+            @include mq('sp') {
+                margin-top: 20px;
+            }
+            @include mq('md') {
+                margin-top: 25px;
+            }
+        }
+
+        > time {
+            @include mq('md') {
+                flex: 0 0 250px;
+            }
+        }
+
+        > p {
+            @include mq('sp') {
+                padding-left: 15px;
+            }
+            @include mq('md') {
+                flex: 0 1 100%;
+                padding:0 15px;
+            }
+        }
+
+        > a {
+            color: $color-txt-dark;
+            text-decoration: underline;
+            flex: 0 0 190px;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .inq-btn,
+        .rsv-btn {
+            flex: 0 1 193px;
+            line-height: 60px;
+            @include mq('sp') {
+                margin-top: $pd-sp;
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+            @include mq('md') {
+                margin-top: $pd-md;
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+        }
+        
+        .inq-btn a {
+            @include _btn('inq');           
+        }
+
+        .rsv-btn a {
+            @include _btn;
+            font-size: 13px;
+        }
+    }
+}
+

@@ -1,0 +1,52 @@
+.gnav {
+    @include mq('sp') {
+        height: 60px;
+        position: relative;
+    }
+    @include mq('md') {
+        height: 90px;
+        text-align: center;
+    }
+
+    &-list {
+        @include mq('md') {
+            display: inline-flex;
+        }
+    }
+
+    &-item {
+        @include mq('sp') {
+            margin-top: $pd-sp;
+        }
+        @include mq('md') {
+            & + & {
+                margin-left: $pd-md;
+            }
+        }
+        
+        a {
+            padding-top: 10px;
+            @include mq('sp') {
+                text-align: center;
+                line-height: 50px;
+            }
+            @include mq('md') {
+                line-height: 80px;
+            }
+
+            ruby {
+                color: #421F15;
+                font-size: $fz-l;
+                font-weight: $fw-bold;
+
+                > rt {
+                    font-size: $fz-xs;
+                    letter-spacing: .1em;
+                    margin-bottom: .5em;
+                    transform: translateY(-.6em);
+                    text-align: center;
+                }
+            }
+        }       
+    }
+}

@@ -1,0 +1,46 @@
+.art {
+    &-wrap {
+        margin-top: 28px;
+    }
+
+    &-img {
+        @include _ratio(71.34%);
+    }
+
+    &-head {
+        color: $color-txt-white;
+        background-color: $color-bg-dark;
+        padding: 14px $pd-md 17px;
+
+        > time {
+            font-size: $fz-xs;
+        }
+
+        > h2 {
+            margin-top: 5px;
+            font-size: 26px;
+            font-weight: $fw-bold;
+        }
+    }
+
+    &-body {
+        background-color: $color-bg;
+        padding: $pd-md;
+        
+        h3 {
+            font-size: $fz-l;
+            font-weight: $fw-bold;
+            line-height: 1.1818;
+        }
+
+        h4 {
+            font-size: $fz-m;
+            font-weight: $fw-bold;
+            padding: 2em 0;
+        }
+
+        p {
+            line-height: 1.625;
+        }
+    }
+}

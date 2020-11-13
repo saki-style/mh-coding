@@ -1,0 +1,27 @@
+@mixin _btn( $type:'base' ) {
+  max-width: 100%;
+  text-align: center;
+  font-weight: $fw-bold;
+
+  //ベースボタン
+  @if( $type == 'base' ) {
+    color: $color-txt-white;
+    background-color: $color-link-base;
+  }
+
+  //問合せボタン
+  @else if( $type == 'inq' ) {
+    font-size: 13px;
+    color: $color-txt-white;
+    background-color: $color-link-inq;
+  }
+
+  //moreリンク
+  @else if ( $type == 'more' ) {
+    font-size: $fz-s;
+    color: $color-link-base;
+    background-color: transparent;
+    border: 5px solid $color-link-base;
+    box-sizing: content-box;
+  }
+}
