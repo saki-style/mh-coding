@@ -14,7 +14,6 @@ textarea {
 
     &:focus {
         box-shadow: none;
-        outline: none;
     }
 }
 
@@ -28,8 +27,7 @@ button[type='submit'] {
     font-size: 1em;
     text-decoration: none;
 
-    &:hover,
-    &:focus {
+    &:hover {
         outline: none;
     }
 
