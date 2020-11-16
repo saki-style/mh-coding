@@ -1,7 +1,7 @@
-jQuery(function(){
+$(function(){
 
 // drawer
-jQuery('.drawer').drawer();
+$('.drawer').drawer();
 
 // wow
 new WOW().init();
