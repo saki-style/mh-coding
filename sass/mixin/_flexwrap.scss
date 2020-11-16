@@ -31,7 +31,7 @@
     }
     
     // タブレット以上横２アイテム
-    @if( $type == 'md2' ) {
+    @else if( $type == 'md2' ) {
         @include mq('md') {
             flex-wrap: wrap;
             @content;
